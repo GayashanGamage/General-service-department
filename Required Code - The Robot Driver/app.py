@@ -50,7 +50,7 @@ class amazonProductsearch:
             with sync_playwright() as p:
                 print('this is try to execute')
                 for item in self.availableBrowserList:
-                    self.browser = getattr(p, item) .launch(headless=False)
+                    self.browser = getattr(p, item) .launch()
                     self.context = self.browser.new_context()
                     self.tab_one = self.context.new_page()
 
